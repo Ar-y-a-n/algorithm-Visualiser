@@ -1,0 +1,100 @@
+.pathfinding-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* Set background to black */
+    height: 100vh; /* Full viewport height */
+    color: #fff; /* Text color to white */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .pathfinding-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .pathfinding-header h1 {
+    margin: 0;
+  }
+  
+  .back-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .pathfinding-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .pathfinding-controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pathfinding-controls button:disabled {
+    background-color: #aaa;
+  }
+  
+  .pathfinding-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .pathfinding-controls input[type="range"] {
+    margin: 0 10px;
+  }
+  
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw; /* Full viewport width */
+    height: calc(100vh - 120px); /* Full viewport height minus header and controls */
+    overflow: hidden; /* Hide overflow to ensure no scrollbars */
+  }
+  
+  .grid-row {
+    display: flex;
+  }
+  
+  .node {
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    display: inline-block;
+    border: 1px solid white; /* White border for all nodes */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Distinct styles for algorithm states */
+  .node-visited {
+    background-color: yellow; /* Visited nodes color */
+  }
+  
+  .node-path {
+    background-color: orange; /* Path nodes color */
+  }
+  
+  .node-start {
+    background-color: green; /* Start node color */
+  }
+  
+  .node-end {
+    background-color: red; /* End node color */
+  }
+  
+  .node-wall {
+    background-color: gray; /* Wall nodes color */
+  }
+  

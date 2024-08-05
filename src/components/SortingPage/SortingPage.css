@@ -1,41 +1,100 @@
-/* src/components/SortingPage/SortingPage.css */
 .sorting-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #f0f0f0;
-    padding: 20px;
-  }
-  
-  .sorting-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 40px;
-  }
-  
-  .sorting-header h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .back-link {
-    font-size: 1rem;
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .sorting-content {
-    width: 100%;
-    max-width: 1200px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Add additional styles for sorting algorithm visualizations */
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000; /* Set background to black */
+  height: 100vh; /* Full viewport height */
+  color: #fff; /* Text color to white */
+}
+
+.sorting-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.sorting-header h1 {
+  margin: 0;
+}
+
+.back-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.sorting-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.sorting-controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sorting-controls button:disabled {
+  background-color: #aaa;
+}
+
+.sorting-controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.sorting-controls input[type="range"] {
+  margin: 0 10px;
+}
+
+.speed-control {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.speed-control label {
+  margin-right: 10px;
+}
+
+.array-container {
+  display: flex;
+  align-items: flex-end;
+  height: 70vh; /* Adjust height as needed */
+  width: 90%; /* Slightly less than full width for padding */
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 0 10px; /* Add padding to avoid bars touching the edges */
+  background-color: #222; /* Dark background for the container */
+  overflow: hidden; /* Ensure bars don't overflow the container */
+}
+
+.array-bar {
+  background-color: #ff5733; /* Light color for bars */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin: 0 1px; /* Ensure margin between bars */
+  border-radius: 5px;
+  color: #000; /* Text color inside the bars */
+  font-weight: bold;
+  text-align: center;
+}
+
+.array-number {
+  width: 100%; /* Ensure number spans the width of the bar */
+  padding-top: 5px; /* Adjust to position number at the top */
+  font-weight: bold;
+  color: #000; /* Text color inside the bars */
+}
